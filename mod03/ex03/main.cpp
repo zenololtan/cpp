@@ -1,5 +1,6 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
 
 int	main(void)
 {
@@ -36,7 +37,12 @@ int	main(void)
 	scav2->takeDamage(200);
 	delete scav2;
 
-	scav.takeDamage(95);
-	frag.takeDamage(95);
+	NinjaTrap	*ninja2 = new NinjaTrap();
+	ninja2->ninjaShoebox(scav);
+	ninja2->ninjaShoebox(frag);
+	
+	NinjaTrap	ninja("RacialSteriotype");
+	ninja.ninjaShoebox(*ninja2);
+	delete ninja2;
 	return 0;
 }

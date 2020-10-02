@@ -102,6 +102,16 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	std::cout << c_name << name << c_reset << " is being repaired for " << c_repair << amount << c_reset << " points" << std::endl;
 }
 
+std::string		ClapTrap::getName()
+{
+	return name;
+}
+
+std::string		ClapTrap::getNameColor()
+{
+	return c_name;
+}
+
 ClapTrap::~ClapTrap()
 {
 	std::cout << c_reset << "ClapTrap destructor called" << std::endl;
