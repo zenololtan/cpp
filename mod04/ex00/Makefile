@@ -1,11 +1,9 @@
-NAME = SuperTrap
+NAME = sorc
 
 FILES =	main.cpp \
-	FragTrap.cpp \
-	ScavTrap.cpp \
-	ClapTrap.cpp \
-	NinjaTrap.cpp \
-	SuperTrap.cpp
+	Sorcerer.cpp \
+	Victim.cpp \
+	Peon.cpp
 
 CC = clang++
 

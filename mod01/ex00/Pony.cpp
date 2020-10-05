@@ -3,9 +3,25 @@
 
 Pony::Pony()
 {
-	std::cout << "Constructed a pony ";
+	std::cout << "Constructed a pony";
 	speed = 1;
 	strength = 1;
+}
+
+Pony::Pony(const Pony &copy)
+{
+	std::cout << "Copying a pony";
+	*this = copy;
+}
+
+Pony&	Pony::operator=(const Pony &copy)
+{
+	if (this != &copy)
+	{
+		speed = copy.speed;
+		strength = copy.strength;
+	}
+	return *this;
 }
 
 Pony::~Pony()

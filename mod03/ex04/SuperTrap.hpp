@@ -2,15 +2,16 @@
 # define SUPERTRAP_HPP
 
 # include "NinjaTrap.hpp"
+# include "FragTrap.hpp"
 
-class ScavTrap : public NinjaTrap, public FragTrap
+class SuperTrap : public FragTrap, public NinjaTrap
 {
 public:
-	ScavTrap();
-	ScavTrap(const std::string _name);
-	ScavTrap(const ScavTrap &old);
-	ScavTrap&		operator=(const ScavTrap &old);
-	virtual ~ScavTrap();
+	SuperTrap();
+	SuperTrap(const std::string _name);
+	SuperTrap(const SuperTrap &old);
+	SuperTrap&		operator=(const SuperTrap &old);
+	virtual ~SuperTrap();
 };
 
 #endif

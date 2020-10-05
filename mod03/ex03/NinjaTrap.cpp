@@ -8,7 +8,7 @@ NinjaTrap::NinjaTrap()
 	name = "???";
 	lvl = 1;
 	hit_points = 60;
-	m_hit_points = 606;
+	m_hit_points = 60;
 	energy_points = 120;
 	m_energy_points = 120;
 	melee_ad = 60;

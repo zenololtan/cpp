@@ -1,11 +1,13 @@
-NAME = SuperTrap
+NAME = wasteland
 
 FILES =	main.cpp \
-	FragTrap.cpp \
-	ScavTrap.cpp \
-	ClapTrap.cpp \
-	NinjaTrap.cpp \
-	SuperTrap.cpp
+	AWeapon.cpp \
+	PlasmaRifle.cpp \
+	PowerFist.cpp \
+	Enemy.cpp \
+	SuperMutant.cpp \
+	RadScorpion.cpp \
+	Character.cpp
 
 CC = clang++
 

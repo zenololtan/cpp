@@ -5,6 +5,8 @@ class Pony
 {
 	public:
 		Pony();
+		Pony(const Pony &copy);
+		Pony&	operator=(const Pony &copy);
 		~Pony();
 		void	feed();
 		void	ride();

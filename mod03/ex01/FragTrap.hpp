@@ -33,6 +33,4 @@ public:
 	~FragTrap();
 };
 
-
-
 #endif
