@@ -20,6 +20,10 @@ class Character
 		void		equip(AWeapon *wp);
 		void		attack(Enemy *en);
 		std::string	getName() const;
+		int			getAP() const;
+		AWeapon*	getWeapon() const;
 };
+
+std::ostream&	operator<<(std::ostream& out, const Character& character);
 
 #endif

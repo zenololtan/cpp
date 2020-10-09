@@ -12,4 +12,4 @@ class SuperMutant : public Enemy
 		virtual	void	takeDamage(int amount);
 };
 
-endif
+#endif

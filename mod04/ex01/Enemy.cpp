@@ -3,7 +3,7 @@
 
 Enemy::Enemy() {}
 
-Enemy::Enemy(int hp, std::string const& type) : _hp(hp), _type(type)
+Enemy::Enemy(int hp, std::string const& type) : _type(type), _hp(hp)
 {}
 
 Enemy::Enemy(const Enemy& copy)
@@ -36,7 +36,7 @@ void		Enemy::takeDamage(int amount)
 	if (amount >= _hp)
 	{
 		_hp = 0;
-		std::cout << "Nothing realy happened..." << std::endl;
+		std::cout << _type << " took a fatal hit!" << std::endl;
 	}
 	else
 	{
