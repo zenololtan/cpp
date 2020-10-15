@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ClapTrap.hpp                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/15 15:30:39 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/15 15:30:40 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
@@ -24,13 +36,14 @@ public:
 	ClapTrap(const std::string _name);
 	ClapTrap(const ClapTrap &old);
 	ClapTrap&		operator=(const ClapTrap &old);
+	~ClapTrap();
+
 	virtual void	rangedAttack(std::string const &target);
 	virtual void	meleeAttack(std::string const &target);
 	void			takeDamage(unsigned int amount);
 	void			beRepaired(unsigned int amount);
 	std::string		getName();
 	std::string		getNameColor();
-	~ClapTrap();
 };
 
 #endif

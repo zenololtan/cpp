@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   FragTrap.hpp                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/15 15:28:05 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/15 15:28:06 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 
@@ -26,6 +38,7 @@ public:
 	FragTrap(const FragTrap &old);
 	FragTrap&	operator=(const FragTrap &old);
 	~FragTrap();
+
 	void		rangedAttack(std::string const &target);
 	void		meleeAttack(std::string const &target);
 	void		takeDamage(unsigned int amount);

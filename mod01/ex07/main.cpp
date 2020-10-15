@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   main.cpp                                           :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/15 00:30:43 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/15 01:33:20 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -12,11 +24,12 @@ int	Error(std::string error)
 int	replace(std::string Filename, std::string s1, std::string s2)
 {
 	std::ifstream	input(Filename.c_str());
-	std::string	outputname(Filename + ".replace");
+	std::string		outputname(Filename + ".replace");
 	std::ofstream	output(outputname.c_str());
-	std::string	buff;
-	std::size_t	strlen = s1.length();
-	std::size_t	index;
+	std::string		buff;
+	std::size_t		strlen1 = s1.length();
+	std::size_t		strlen2 = s2.length();
+	std::size_t		index;
 
 	if (!input || !output)
 		return Error("Could not open file.");
@@ -24,11 +37,11 @@ int	replace(std::string Filename, std::string s1, std::string s2)
 		return Error("Can not replace a string with itself.");
 	while (std::getline(input, buff))
 	{
-		index = 0;
-		while ((index = buff.find(s1), index) != std::string::npos)
+		index = buff.find(s1);
+		while (index != std::string::npos)
 		{
-			buff.replace(index, strlen, s2);
-			index += strlen;
+			buff.replace(index, strlen1 , s2);
+			index = buff.find(s1, index + strlen2);
 		}
 		output << buff;
 		if (!output.eof())

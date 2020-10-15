@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   SuperTrap.hpp                                      :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/15 15:31:14 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/15 15:31:15 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SUPERTRAP_HPP
 # define SUPERTRAP_HPP
 
@@ -11,7 +23,7 @@ public:
 	SuperTrap(const std::string _name);
 	SuperTrap(const SuperTrap &old);
 	SuperTrap&		operator=(const SuperTrap &old);
-	virtual ~SuperTrap();
+	virtual			~SuperTrap();
 };
 
 #endif

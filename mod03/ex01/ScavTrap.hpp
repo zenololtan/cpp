@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ScavTrap.hpp                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/15 15:28:40 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/15 15:29:00 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
@@ -24,13 +36,13 @@ public:
 	ScavTrap();
 	ScavTrap(const std::string name);
 	ScavTrap(const ScavTrap &old);
-	ScavTrap& operator=(const ScavTrap &old);
-	void	rangedAttack(std::string const &target);
-	void	meleeAttack(std::string const &target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
-	void	challengeNewcomer();
+	ScavTrap&	operator=(const ScavTrap &old);
 	~ScavTrap();
+	void		rangedAttack(std::string const &target);
+	void		meleeAttack(std::string const &target);
+	void		takeDamage(unsigned int amount);
+	void		beRepaired(unsigned int amount);
+	void		challengeNewcomer();
 };
 
 

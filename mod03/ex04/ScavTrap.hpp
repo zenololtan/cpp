@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ScavTrap.hpp                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/15 15:31:09 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/15 15:31:10 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
@@ -10,8 +22,9 @@ public:
 	ScavTrap(const std::string _name);
 	ScavTrap(const ScavTrap &old);
 	ScavTrap&		operator=(const ScavTrap &old);
-	void			challengeNewcomer();
 	virtual			~ScavTrap();
+
+	void			challengeNewcomer();
 };
 
 #endif

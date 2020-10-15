@@ -6,14 +6,15 @@
 /*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/09 14:34:52 by zenotan       #+#    #+#                 */
-/*   Updated: 2020/10/09 15:22:04 by zenotan       ########   odam.nl         */
+/*   Updated: 2020/10/11 19:21:56 by zenotan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+#include "Colors.hpp"
 #include <iostream>
 
-AMateria::AMateria() : _type(NULL), _xp(0)
+AMateria::AMateria() : _type("Satanic chant"), _xp(0)
 {}
 
 AMateria::AMateria(std::string const& type) : _type(type), _xp(0)
@@ -44,9 +45,14 @@ unsigned int		AMateria::getXP() const
 	return _xp;
 }
 
+AMateria*			AMateria::clone() const
+{
+	return new AMateria(*this);
+}
+
 void				AMateria::use(ICharacter& target)
 {
-	std::cout << "Some weird shit happening other then cure or ice " << target.getName() << " starts ferociously barfing and crying on the ground" << std::endl;
+	std::cout << RED <<"* Some weird shit is happening other then cure or ice, " << target.getName() << " starts ferociously barfing and crying on the ground oh god oh help what have you done *" << RESET << std::endl;
 	this->_xp += 10;
 }
 

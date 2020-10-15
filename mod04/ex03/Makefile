@@ -1,9 +1,12 @@
-NAME = Violence
+NAME = Fantasy
 
 FILES =	main.cpp \
-	Weapon.cpp \
-	HumanB.cpp \
-	HumanA.cpp
+	Dividers.cpp \
+	Character.cpp \
+	AMateria.cpp \
+	Cure.cpp \
+	Ice.cpp \
+	MateriaSource.cpp
 
 CC = clang++
 
