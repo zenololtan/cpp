@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   PowerFist.cpp                                      :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/17 15:06:04 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/17 15:06:05 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PowerFist.hpp"
 #include <iostream>
 
@@ -19,8 +31,6 @@ PowerFist&	PowerFist::operator=(const PowerFist& copy)
 	}
 	return *this;
 }
-
-PowerFist::~PowerFist() {}
 
 void		PowerFist::attack() const
 {

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   Character.cpp                                      :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/17 15:04:54 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/17 15:04:55 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Character.hpp"
 #include <iostream>
 
@@ -95,5 +107,3 @@ std::ostream&	operator<<(std::ostream& out, const Character& character)
 		out << " and wields a " << character.getWeapon()->getName() << std::endl;
 	return out;
 }
-
-Character::~Character() {}

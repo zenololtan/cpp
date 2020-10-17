@@ -1,7 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   AWeapon.cpp                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/17 15:03:13 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/17 15:03:40 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "AWeapon.hpp"
 #include <iostream>
-
-AWeapon::AWeapon() {}
 
 AWeapon::AWeapon(std::string const& name, int apcost, int damage) :
 _name(name),
@@ -39,5 +49,3 @@ int			AWeapon::getDamage() const
 {
 	return _dmg;
 }
-
-AWeapon::~AWeapon() {}

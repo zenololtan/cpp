@@ -6,7 +6,7 @@
 /*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/11 16:12:07 by zenotan       #+#    #+#                 */
-/*   Updated: 2020/10/12 01:27:59 by zenotan       ########   odam.nl         */
+/*   Updated: 2020/10/17 16:32:01 by zenotan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,12 @@ void	extra_tests(void)
 	MateriaSource	*src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
-
+	
 	MateriaSource	*copy = new MateriaSource();	// Concrete class to allow copying
 	*copy = *src; 				// Testing assignation
 	ICharacter		*hero = new Character("Billy Hatcher");
 	ICharacter		*enemy = new Character("Some evil dragon, or something");
-
+	
 	AMateria*		tmp;
 
 	// Equipping while checking to see if materia exists in src.

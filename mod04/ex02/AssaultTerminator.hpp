@@ -6,7 +6,7 @@
 /*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/08 19:19:57 by zenotan       #+#    #+#                 */
-/*   Updated: 2020/10/08 20:54:44 by zenotan       ########   odam.nl         */
+/*   Updated: 2020/10/17 15:34:51 by zenotan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class AssaultTerminator : public ISpaceMarine
 		AssaultTerminator(const AssaultTerminator& old_marine);
 		AssaultTerminator&	operator=(const AssaultTerminator& other);
 		~AssaultTerminator();
+
 		AssaultTerminator*	clone() const;
 		void				battleCry() const;
 		void				rangedAttack() const;

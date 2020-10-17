@@ -6,7 +6,7 @@
 /*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/11 19:48:30 by zenotan       #+#    #+#                 */
-/*   Updated: 2020/10/12 00:53:22 by zenotan       ########   odam.nl         */
+/*   Updated: 2020/10/17 16:27:41 by zenotan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,15 @@ MateriaSource::MateriaSource(const MateriaSource& copy)
 
 MateriaSource&	MateriaSource::operator=(const MateriaSource& copy)
 {
-	if (this == &copy)
+	if (this != &copy)
 	{
-		for (int i = 0; i <= this->_count; ++i)
-		{
-			delete this->spellbook[i];
-			this->spellbook[i] = NULL;
-		}
-		this->_count = copy._count;
 		for (int i = 0; i < this->_count; ++i)
-			this->spellbook[i] = this->spellbook[i]->clone();
+			delete this->spellbook[i];
+		this->_count = copy._count;
+		for (int i = 0; i < 4; ++i)
+			this->spellbook[i] = NULL;
+		for (int i = 0; i < this->_count; ++i)
+			this->spellbook[i] = copy.spellbook[i]->clone();
 	}
 	return *this;
 }
@@ -62,7 +61,7 @@ void			MateriaSource::learnMateria(AMateria *type)
 
 AMateria*		MateriaSource::createMateria(const std::string& type)
 {
-	for (int i = 0; i <= this->_count; ++i)
+	for (int i = 0; i < this->_count; ++i)
 	{
 		if (this->spellbook[i]->getType() == type)
 		{
@@ -70,5 +69,5 @@ AMateria*		MateriaSource::createMateria(const std::string& type)
 			return this->spellbook[i]->clone();
 		}
 	}
-	return NULL;
+	return 0;
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   main.cpp                                           :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/17 15:03:09 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/17 15:03:10 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PlasmaRifle.hpp"
 #include "PowerFist.hpp"
 #include "SuperMutant.hpp"

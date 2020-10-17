@@ -6,7 +6,7 @@
 /*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/11 14:51:29 by zenotan       #+#    #+#                 */
-/*   Updated: 2020/10/12 00:50:27 by zenotan       ########   odam.nl         */
+/*   Updated: 2020/10/17 16:31:38 by zenotan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ std::string const&	Character::getName() const
 
 void				Character::equip(AMateria* m)
 {
+	if (!m)
+		return ;
 	bool equiped = false;
 	int n;
 	for (int i = 0; i <= 3; ++i)

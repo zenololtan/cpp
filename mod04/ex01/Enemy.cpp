@@ -1,7 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   Enemy.cpp                                          :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/17 15:05:02 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/17 15:05:10 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Enemy.hpp"
 #include <iostream>
-
-Enemy::Enemy() {}
 
 Enemy::Enemy(int hp, std::string const& type) : _type(type), _hp(hp)
 {}
@@ -44,5 +54,3 @@ void		Enemy::takeDamage(int amount)
 		std::cout << _type << " took " << amount << " damage, its hp is now " << _hp << std::endl;
 	}
 }
-
-Enemy::~Enemy() {}

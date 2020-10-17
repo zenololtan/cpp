@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   Character.hpp                                      :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/17 15:04:57 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/17 15:04:58 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
@@ -14,7 +26,8 @@ class Character
 		Character();
 		Character(const Character& copy);
 		Character&	operator=(const Character& copy);
-		~Character();
+		~Character() {}
+
 		Character(std::string const& name);
 		void		recoverAP();
 		void		equip(AWeapon *wp);

@@ -8,11 +8,12 @@ class Enemy
 		std::string	_type;
 		int			_hp;
 	public:
-		Enemy();
-		Enemy(int hp, std::string const& type);
+		Enemy() {}
 		Enemy(const Enemy& copy);
 		Enemy&			operator=(const Enemy& copy);
-		virtual			~Enemy();
+		virtual			~Enemy() {}
+
+		Enemy(int hp, std::string const& type);
 		std::string		getType() const;
 		int				getHP() const;
 		virtual	void	takeDamage(int amount);

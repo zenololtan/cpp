@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   PlasmaRifle.cpp                                    :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/17 15:05:43 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/17 15:05:44 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PlasmaRifle.hpp"
 #include <iostream>
 
@@ -24,5 +36,3 @@ void			PlasmaRifle::attack() const
 {
 	std::cout << "* piouuu piouuu piouuu *" << std::endl;
 }
-
-PlasmaRifle::~PlasmaRifle() {}

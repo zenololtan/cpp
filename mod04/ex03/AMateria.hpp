@@ -6,7 +6,7 @@
 /*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/09 14:18:36 by zenotan       #+#    #+#                 */
-/*   Updated: 2020/10/11 19:16:30 by zenotan       ########   odam.nl         */
+/*   Updated: 2020/10/17 16:01:35 by zenotan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ class AMateria
 		unsigned int	_xp;
 	public:
 		AMateria();
-		AMateria(std::string const& type);
 		AMateria(const AMateria& copy);
 		AMateria&			operator=(const AMateria& copy);
-		virtual				~AMateria();
+		virtual				~AMateria() {}
 
+		AMateria(std::string const& type);
 		std::string const&	getType() const; //Returns the materia type
 		unsigned int		getXP() const; //Returns the Materia's XP
 		virtual AMateria*	clone() const;

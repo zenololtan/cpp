@@ -6,7 +6,7 @@
 /*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/07 12:53:46 by zenotan       #+#    #+#                 */
-/*   Updated: 2020/10/08 20:57:55 by zenotan       ########   odam.nl         */
+/*   Updated: 2020/10/17 15:35:29 by zenotan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Squad : public ISquad
 		Squad(const Squad &copy);
 		Squad&			operator=(const Squad &copy);
 		virtual			~Squad();
-		
+
 		int				getCount() const;
 		ISpaceMarine*	getUnit(int i) const;
 		int				push(ISpaceMarine* unit);
