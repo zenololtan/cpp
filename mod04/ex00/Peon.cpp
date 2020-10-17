@@ -1,12 +1,24 @@
-#include "Peon.hpp"
-#include <iostream>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   Peon.cpp                                           :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: zenotan <zenotan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/17 00:43:28 by zenotan       #+#    #+#                 */
+/*   Updated: 2020/10/17 00:43:29 by zenotan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
-Peon::Peon(std::string name) : Victim::Victim(name)
+#include <iostream>
+#include "Peon.hpp"
+
+Peon::Peon(std::string name) : Victim(name)
 {
 	std::cout << "Zorg zorg." << std::endl;
 }
 
-Peon::Peon(const Peon& copy)
+Peon::Peon(const Peon& copy) : Victim("Peony")
 {
 	*this = copy;
 }
