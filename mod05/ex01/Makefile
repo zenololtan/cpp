@@ -6,14 +6,15 @@
 #    By: ztan <ztan@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/07/24 15:55:06 by ztan          #+#    #+#                  #
-#    Updated: 2021/07/24 15:55:34 by ztan          ########   odam.nl          #
+#    Updated: 2021/07/24 21:11:53 by ztan          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Bureaucrat
 
 FILES =	main.cpp \
-	Bureaucrat.cpp
+	Bureaucrat.cpp \
+	Form.cpp
 
 OBJDIR = obj/
 
