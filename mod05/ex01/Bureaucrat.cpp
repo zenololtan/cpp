@@ -66,3 +66,19 @@ void		Bureaucrat::decGrade()
 	if (this->grade < 150)
 		this->grade += 1;
 }
+
+void		Bureaucrat::signForm(Form &f)
+{
+	if (this->grade > f.getSignRec())
+	{
+		std::cout << "Bureaucrat named " << this->getName() << "can not sign form, ";
+		std::cout << "grade is too low" <<std::endl;
+		return ;
+	}
+	if (f.getIsSigned() == true)
+	{
+		std::cout << "File has already been signed" << std::endl;
+		return ;
+	}
+	f.beSigned(*this);
+}

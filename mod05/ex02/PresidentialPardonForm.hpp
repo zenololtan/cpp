@@ -1,22 +1,11 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        ::::::::            */
-/*   PresidentialPardonForm.hpp                         :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: ztan <ztan@student.codam.nl>                 +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2021/07/24 18:33:33 by ztan          #+#    #+#                 */
-/*   Updated: 2021/07/24 18:33:34 by ztan          ########   odam.nl         */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef PRESIDENTIALPARDONFORM_HPP
 # define PRESIDENTIALPARDONFORM_HPP
+# include "Form.hpp"
 
 class	PresidentialPardonForm
 {
 	private:
-		/*class vars*/
+		std::string				target;
 	public:
 		PresidentialPardonForm();
 		~PresidentialPardonForm();

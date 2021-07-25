@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        ::::::::            */
-/*   RobotomyRequestForm.cpp                            :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: ztan <ztan@student.codam.nl>                 +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2021/07/24 18:33:35 by ztan          #+#    #+#                 */
-/*   Updated: 2021/07/24 18:33:37 by ztan          ########   odam.nl         */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include /RobotomyRequestForm.hpp/
 
 RobotomyRequestForm::RobotomyRequestForm():

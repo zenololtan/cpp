@@ -15,26 +15,32 @@
 
 int	main(void)
 {
-	try
-	{
-		Bureaucrat new_bur("Timmy", 50);
-		std::cout << new_bur << std::endl;
-	}
-	catch (std::exception & e)
-	{
-		std::cout << e.what() << std::endl;
-		return 0;
-	}
-	try
-	{
-		Form new_form("ass", 50, 50);
-		std::cout << new_form << std::endl;
-	}
-	catch (std::exception & e)
-	{
-		std::cout << e.what() << std::endl;
-		return 0;
-	}
-	
-	return 0;
+	try {
+        Form A("this ", 0, 8);
+    }
+    catch (std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;    
+    } 
+    Bureaucrat B("My B", 7);
+    std::cout << B << std::endl;
+    Form C("C", 8, 2);
+    std::cout << C << std::endl;
+    try {
+    B.signForm(C);
+    }
+    catch (std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;    
+    } 
+    std::cout << C << std::endl;
+    try {
+    B.signForm(C);
+    }
+    catch (std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;    
+    } 
+    std::cout << C << std::endl;
+    return (0);
 }
