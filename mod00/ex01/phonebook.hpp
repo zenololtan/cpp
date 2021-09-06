@@ -6,7 +6,7 @@
 /*   By: ztan <ztan@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/29 16:39:32 by ztan          #+#    #+#                 */
-/*   Updated: 2021/08/29 16:39:47 by ztan          ########   odam.nl         */
+/*   Updated: 2021/09/06 13:42:57 by ztan          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ class phonebook
 	void		set_underwearColor(std::string input);
 	std::string get_darkestSecret(void);
 	void		set_darkestSecret(std::string input);
+	void		setter(std::string str, void (phonebook::*f)(std::string));
+
 };
 
 #endif

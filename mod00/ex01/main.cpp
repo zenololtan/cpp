@@ -6,7 +6,7 @@
 /*   By: ztan <ztan@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/29 16:40:26 by ztan          #+#    #+#                 */
-/*   Updated: 2021/08/29 16:48:59 by ztan          ########   odam.nl         */
+/*   Updated: 2021/09/06 13:42:53 by ztan          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,40 +15,18 @@
 void	ft_add(class phonebook *pb, int i)
 {
 	std::string input;
-	
-	std::cout << "What is your name?: ";
-	std::getline(std::cin, input);
-	pb[i].phonebook::set_name(input);
-	std::cout << "What is your surname?: ";
-	std::getline(std::cin, input);
-	pb[i].phonebook::set_surname(input);
-	std::cout << "what is your nickname?: ";
-	std::getline(std::cin, input);
-	pb[i].phonebook::set_nickname(input);
-	std::cout << "what is your login: ";
-	std::getline(std::cin, input);
-	pb[i].phonebook::set_login(input);
-	std::cout << "what is your adress?: ";
-	std::getline(std::cin, input);
-	pb[i].phonebook::set_postalAdress(input);
-	std::cout << "what is your mail?: ";
-	std::getline(std::cin, input);
-	pb[i].phonebook::set_email(input);
-	std::cout << "what is your phonenumber?: ";
-	std::getline(std::cin, input);
-	pb[i].phonebook::set_number(input);
-	std::cout << "what is your birthday?: ";
-	std::getline(std::cin, input);
-	pb[i].phonebook::set_birthday(input);
-	std::cout << "what is your fav meal?: ";
-	std::getline(std::cin, input);
-	pb[i].phonebook::set_favMeal(input);
-	std::cout << "what color is your underwear?: ";
-	std::getline(std::cin, input);
-	pb[i].phonebook::set_underwearColor(input);
-	std::cout << "what is your darkest secret?: ";
-	std::getline(std::cin, input);
-	pb[i].phonebook::set_darkestSecret(input);
+
+	pb[i].setter("What is your name?: ", &phonebook::set_name);
+	pb[i].setter("What is your surname?: ", &phonebook::set_surname);
+	pb[i].setter("what is your nickname?: ", &phonebook::set_nickname);
+	pb[i].setter("what is your login: ", &phonebook::set_login);
+	pb[i].setter("what is your adress?: ", &phonebook::set_postalAdress);
+	pb[i].setter("what is your mail?: ", &phonebook::set_email);
+	pb[i].setter("what is your phonenumber?: ", &phonebook::set_number);
+	pb[i].setter("what is your birthday?: ", &phonebook::set_birthday);
+	pb[i].setter("what is your fav meal?: ", &phonebook::set_favMeal);
+	pb[i].setter("what color is your underwear?: ", &phonebook::set_underwearColor);
+	pb[i].setter("what is your darkest secret?: ", &phonebook::set_darkestSecret);
 }
 
 std::string truncate(std::string str, size_t width, bool show_ellipsis=true)
@@ -67,9 +45,12 @@ std::string truncate(std::string str, size_t width, bool show_ellipsis=true)
 void	ft_makeinfo(class phonebook pb, int i)
 {
 	std::cout << std::setfill(' ') << std::setw(10) << std::right << i << "|";
-	std::cout << std::setfill(' ') << std::setw(10) << std::right << truncate(pb.phonebook::get_name(), 10, true) << "|";
-	std::cout << std::setfill(' ') << std::setw(10) << std::right << truncate(pb.phonebook::get_surname(), 10, true) << "|";
-	std::cout << std::setfill(' ') << std::setw(10) << std::right << truncate(pb.phonebook::get_nickname(), 10, true) << std::endl;
+	std::cout << std::setfill(' ') << std::setw(10) << std::right <<
+		 truncate(pb.phonebook::get_name(), 10, true) << "|";
+	std::cout << std::setfill(' ') << std::setw(10) << std::right <<
+		 truncate(pb.phonebook::get_surname(), 10, true) << "|";
+	std::cout << std::setfill(' ') << std::setw(10) << std::right <<
+		 truncate(pb.phonebook::get_nickname(), 10, true) << std::endl;
 }
 
 void	ft_makeseperator(void)
@@ -82,10 +63,14 @@ void	ft_makeseperator(void)
 
 void	ft_makeheader(void)
 {
-	std::cout << std::setfill(' ') << std::setw(10) << std::right << "index" << "|";
-	std::cout << std::setfill(' ') << std::setw(10) << std::right << "first name" << "|";
-	std::cout << std::setfill(' ') << std::setw(10) << std::right << "last name" << "|";
-	std::cout << std::setfill(' ') << std::setw(10) << std::right << "nickname" << std::endl;
+	std::cout << std::setfill(' ') << std::setw(10) << std::right <<
+		 "index" << "|";
+	std::cout << std::setfill(' ') << std::setw(10) << std::right <<
+		 "first name" << "|";
+	std::cout << std::setfill(' ') << std::setw(10) << std::right <<
+		 "last name" << "|";
+	std::cout << std::setfill(' ') << std::setw(10) << std::right <<
+		 "nickname" << std::endl;
 	ft_makeseperator();
 }
 
@@ -104,20 +89,10 @@ void	ft_giveinfo(class phonebook *pb, int i)
 	std::cout << "Darkest secret: " << pb[i].phonebook::get_darkestSecret() << std::endl;
 }
 
-void	ft_search(class phonebook *pb, int amount)
+void	ft_select(class phonebook *pb)
 {
-	int i;
 	std::string command;
 
-	i = 0;
-	ft_makeheader();
-	while (i < amount)
-	{
-		ft_makeinfo(pb[i], i + 1);
-		if (i + 1 < amount)
-			ft_makeseperator();
-		i++;
-	}
 	std::cout << "Would you like to know more??" << std::endl;
 	std::getline(std::cin, command);
 	if (command.compare("no") == 0)
@@ -141,6 +116,22 @@ void	ft_search(class phonebook *pb, int amount)
 		ft_giveinfo(pb, 6);
 	if (command.compare("8") == 0)
 		ft_giveinfo(pb, 7);
+}
+
+void	ft_search(class phonebook *pb, int amount)
+{
+	int i;
+
+	i = 0;
+	ft_makeheader();
+	while (i < amount)
+	{
+		ft_makeinfo(pb[i], i + 1);
+		if (i + 1 < amount)
+			ft_makeseperator();
+		i++;
+	}
+	ft_select(pb);
 }
 
 int main(void)
